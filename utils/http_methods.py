@@ -6,7 +6,8 @@ import allure
 """Список HTTP методов"""
 class Http_methods:
     headers = {
-        'Content-Type' : "application/json"
+        'Content-Type' : "application/json",
+        "api-key": "special-key"
     }
     cookie = ''
 
@@ -21,7 +22,7 @@ class Http_methods:
     @staticmethod
     def post(url, body):
         with allure.step("POST"):
-            Logger.add_request(url, method='POST')
+            Logger.add_request(url, method='POST', body=body)
             result = requests.post(url, json=body, headers=Http_methods.headers, cookies=Http_methods.cookie)
             Logger.add_response(result)
             return result

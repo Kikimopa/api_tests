@@ -1,0 +1,1 @@
+pets = ["Cat", "Dog", "Puppy", "Kitten", "Hamster", "Parrot", "Rat", "Mouse", "Guinea pig", "Rabbit"]
