@@ -36,7 +36,7 @@ class Http_methods:
             return result
 
     @staticmethod
-    def delete(url, body):
+    def delete(url, body=None):
         with allure.step("DELETE"):
             Logger.add_request(url, method='DELETE')
             result = requests.delete(url, json=body, headers=Http_methods.headers, cookies=Http_methods.cookie)

@@ -20,7 +20,7 @@ class Pet:
         self.result["name"] = pet_name
         return self
 
-    def set_photo_url(self, url='https://www.google.ru/'):
+    def set_photo_url(self, url=['https://www.google.ru/']):
         self.result["photoUrls"] = url
         return self
 

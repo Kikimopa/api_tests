@@ -14,7 +14,7 @@ class Logger():
 
 
     @classmethod
-    def add_request(cls, url : str, method : str, body: str ):
+    def add_request(cls, url : str, method : str, body=None ):
         test_name = os.environ.get('PYTEST_CURRENT_TEST')
 
         data_to_add = f'-----\n'
