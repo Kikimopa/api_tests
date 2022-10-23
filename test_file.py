@@ -11,12 +11,6 @@ headers = {
     }
 house_pet = Pet().build()
 
-json_post = json.dumps(house_pet)
-print(json_post)
 
-response = requests.post(url=base_url+post_resource, json=json_post, headers=headers)
-print(response.text)
-
-check_post = response.json()
-pet_id = check_post.get("id")
-print(pet_id)
+response = requests.get(url=base_url+get_resource+ "123", headers=headers)
+print(response.json().get('photoUrls')[0])
