@@ -1,5 +1,5 @@
 import requests
-from utils.pet_generator import Pet
+from utils.generators.pet_generator import Pet
 from utils.pydantic_schema.delete import Delete
 from utils.cheker.cheker import ResponseValid
 

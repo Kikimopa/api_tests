@@ -1,6 +1,6 @@
 from pydantic import BaseModel, validator, Field
 
-class Post(BaseModel):
+class PostPet(BaseModel):
     id: int
     category: dict
     name: str
@@ -16,3 +16,13 @@ class Post(BaseModel):
     #         raise ValueError("ID is not less than 2")
     #     else:
     #         return v
+
+class PostUser(BaseModel):
+    id : int
+    username: str
+    firstName: str
+    lastName: str
+    email: str
+    password: str
+    phone: str
+    userStatus: int

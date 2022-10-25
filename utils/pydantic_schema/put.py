@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-class Put(BaseModel):
+class PutPet(BaseModel):
     id: int
     category: dict
     name: str

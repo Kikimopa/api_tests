@@ -1,6 +1,5 @@
 import random
 from data.pets import *
-import json
 from faker import Faker
 
 class Pet:
@@ -31,6 +30,7 @@ class Pet:
 
     def set_status(self, status = 'available'):
         self.result["status"] = status
+        return self
 
     def reset(self):
         self.set_id()

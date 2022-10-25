@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class Get(BaseModel):
+class GetPet(BaseModel):
     id: int
     category: dict
     name: str
