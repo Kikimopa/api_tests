@@ -5,4 +5,6 @@ class ErrorMessages:
     WRONG_ID = "The actual ID does not match the expected one"
     WRONG_NAME = "The actual name of the animal is different from the expected one"
     WRONG_STATUS = "The actual status differs from the expected one"
-    MISSIN_URL = "The URL value is missing in the response"
+    MISSING_URL = "The URL value is missing in the response"
+    WRONG_USER_NAME = "Actual username is different than expected"
+    MISSING_FIELD = f"Some fields are missing"

@@ -38,4 +38,13 @@ class ResponseValid:
         assert self.response_json.get('status') == status, ErrorMessages.WRONG_STATUS
 
     def assert_response_photourl_not_empty(self):
-        assert "https" or "http" in self.response_json.get("photoUrls")[0], ErrorMessages.MISSIN_URL
+        assert "https" or "http" in self.response_json.get("photoUrls")[0], ErrorMessages.MISSING_URL
+
+    def assert_message_equal_username(self, user_name):
+        assert self.response_json.get("message") == user_name, ErrorMessages.WRONG_NAME
+
+    def assert_all_fields(self, body):
+        response_fields = [k for k in self.response_json]
+        body_fields = [k for k in body]
+        for i in range(len(body_fields)):
+            assert response_fields[i] in body_fields, ErrorMessages.MISSING_FIELD

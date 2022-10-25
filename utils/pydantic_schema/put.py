@@ -7,3 +7,8 @@ class PutPet(BaseModel):
     photoUrls: list
     tags: list
     status: str
+
+class PutUser(BaseModel):
+    code : int
+    type : str
+    message : str

@@ -18,11 +18,6 @@ class PostPet(BaseModel):
     #         return v
 
 class PostUser(BaseModel):
-    id : int
-    username: str
-    firstName: str
-    lastName: str
-    email: str
-    password: str
-    phone: str
-    userStatus: int
+    code : int
+    type: str
+    message: str
