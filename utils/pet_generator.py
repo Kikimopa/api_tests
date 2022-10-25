@@ -1,9 +1,10 @@
 import random
 from data.pets import *
 import json
+from faker import Faker
 
 class Pet:
-
+    fake = Faker()
     def __init__(self):
         self.result = {}
         self.reset()
@@ -16,7 +17,7 @@ class Pet:
         self.result["category"] = category
         return self
 
-    def set_pet_name(self, pet_name="Marusia"):
+    def set_pet_name(self, pet_name=fake.name()):
         self.result["name"] = pet_name
         return self
 
@@ -42,5 +43,4 @@ class Pet:
 
     def build(self):
         return self.result
-
 
