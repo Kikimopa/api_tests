@@ -56,7 +56,7 @@ class TestCreatePet:
     def test_delete_pet(self):
         print("\nМетод DELETE")
         with allure.step("Delete pet by id"):
-            response = Response = PetStroreAPI.delete_new_pet(self.pet_id)
+            response : Response = PetStroreAPI.delete_new_pet(self.pet_id)
             with allure.step("Validate response"):
                 delete_result = ResponseValid(response)
                 delete_result.assert_status_code(200).validate(Delete)
